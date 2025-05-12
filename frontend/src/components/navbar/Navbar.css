@@ -1,0 +1,287 @@
+.navbar {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    color: #49557e;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .navbar-menu a:hover {
+    color: maroon;
+  }
+  
+  .navbar-menu .active {
+    color: maroon;
+    font-weight: 600;
+  }
+  
+  .navbar-menu .active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: maroon;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .auth-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .auth-links a {
+    text-decoration: none;
+    color: #49557e;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .auth-links a:hover {
+    color: maroon;
+  }
+  
+  .auth-links .active {
+    color: maroon;
+    font-weight: 600;
+  }
+  
+  .navbar-cart {
+    position: relative;
+  }
+  
+  .navbar-cart img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .navbar-cart .dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: maroon;
+    border-radius: 50%;
+  }
+  
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .mobile-menu-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .mobile-menu-button {
+      display: block;
+    }
+  
+    .navbar-menu {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-150%);
+      transition: transform 0.3s ease;
+    }
+  
+    .navbar-menu.active {
+      transform: translateY(0);
+    }
+  
+    .navbar-menu li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-menu a {
+      padding: 10px 0;
+      display: block;
+      width: 100%;
+    }
+  
+    .auth-links {
+      flex-direction: column;
+      gap: 10px;
+      position: fixed;
+      top: 300px;
+      left: 0;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .navbar-cart {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  .navbar-menu button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 5px 0;
+  color: #49557e;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+  text-align: left;
+}
+
+.navbar-menu button:hover {
+  color: maroon;
+}
+
+.navbar-menu .active {
+  color: maroon;
+  font-weight: 600;
+}
+
+.navbar-menu .active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: maroon;
+}
+
+
+.nav-link.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.nav-link.disabled:hover {
+  color: inherit; /* Prevent color change on hover */
+  text-decoration: none; /* Prevent underline on hover */
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  color: #49557e;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  color: maroon;
+}
+
+/* Update existing .navbar-cart styles */
+.navbar-cart {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Add these new styles for the cart button */
+.cart-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none; /* Removes focus outline */
+  -webkit-appearance: none; /* Removes default styling on iOS */
+  -moz-appearance: none; /* Removes default styling on Firefox */
+}
+
+.cart-btn:focus {
+  outline: none; /* Ensure no outline appears on focus */
+}
+
+/* Keep your existing image and dot styles */
+.navbar-cart img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border: none; /* Explicitly remove any potential image border */
+}
+
+.navbar-cart .dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: maroon;
+  border-radius: 50%;
+}

@@ -1,0 +1,120 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+    position: relative;
+  }
+  
+  .modal-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: maroon;
+  }
+  
+  .modal-title {
+    margin: 0 0 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c2c2c;
+  }
+  
+  .modal-message {
+    margin: 0 0 24px;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .modal-button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 110px;
+    outline: none;
+  }
+  
+  .modal-button:focus-visible {
+    outline: 2px solid maroon;
+  }
+  
+  .modal-button.primary {
+    background-color: maroon;
+    color: #fff;
+  }
+  
+  .modal-button.primary:hover {
+    background-color: #6f1d0a;
+    transform: translateY(-1px);
+  }
+  
+  .modal-button.secondary {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .modal-button.secondary:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px);
+  }
+  
+  .modal-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Optional: Additional context styling (e.g., error modals) */
+  .modal-content.error {
+    border-left: 5px solid maroon;
+  }
+  
