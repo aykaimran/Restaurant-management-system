@@ -3,6 +3,8 @@
 **AVWM (A Virtual Waiting Menu)** is a fully functional, full stack restaurant web application designed to bring the dine-in experience online. Built using **React.js**, **Node.js with Express**, and **SQL**, AVWM provides users with a seamless platform to browse menus, place orders, and manage their cart with ease.
 
 ---
+#### Look for AVWM.mp4 file to watch how the system works
+---
 
 ## 🚀 Features
 
